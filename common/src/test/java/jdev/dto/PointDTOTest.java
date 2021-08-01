@@ -25,6 +25,7 @@ public class PointDTOTest {
         assertTrue(point.toJson().contains("\"lat\":56"));
         assertTrue(point.toJson().contains("\"time\":"));
         System.out.println(point.toJson());
+        System.out.println("-- serialization(converting object to JSON string) succeeded!");
     }
 
     @Test
@@ -33,5 +34,6 @@ public class PointDTOTest {
         PointDTO dto = mapper.readValue(expected, PointDTO.class);
         assertEquals(autoId, dto.getAutoId());
         assertEquals(1627800494452L, dto.getTime());
+        System.out.println("-- deserialization(converting JSON string to object) succeeded!");
     }
 }
