@@ -1,5 +1,6 @@
 subprojects{
     apply plugin: 'java'
+    apply plugin: 'java-library-distribution'
     repositories {
         mavenCentral()
         mavenLocal()
@@ -29,6 +30,7 @@ project(':server-ui') {
 }
 
 project(':tracker-core') {
+
     dependencies {
         compile project(':common')
     }
